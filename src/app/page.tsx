@@ -69,11 +69,6 @@ export default function Home() {
                 <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl/none font-headline bg-gradient-to-r from-primary via-accent to-primary text-transparent bg-clip-text bg-300% animate-gradient">
                   I'm Matei and I do everything.
                 </h1>
-                <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-                  A multi-disciplinary creator, developer, and innovator. Welcome
-                  to my personal space on the web where I showcase my journey and
-                  creations.
-                </p>
               </div>
             </div>
           </div>

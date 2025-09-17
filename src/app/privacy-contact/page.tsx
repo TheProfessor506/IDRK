@@ -32,7 +32,6 @@ export default function PrivacyContactPage() {
               </p>
             </div>
             <div className="w-full">
-              <h3 className="text-2xl font-headline text-center mb-6">Send a Message</h3>
               <ContactForm />
             </div>
           </CardContent>
