@@ -22,12 +22,12 @@ export default function PrivacyContactPage() {
         <Card className="w-full">
           <CardHeader className="text-center">
             <CardTitle className="text-3xl font-headline">Privacy & Contact</CardTitle>
-            <CardDescription className="pt-2">My policy is simple. My contact form is even simpler.</CardDescription>
+            <CardDescription className="pt-2">My policy is simple. My contact form is even simpler. matei@radulescu.org</CardDescription>
           </CardHeader>
           <CardContent className="flex flex-col items-center gap-8 pt-2">
             <div className="text-center p-6 bg-secondary rounded-lg w-full">
               <p className="text-secondary-foreground/80">
-                "Contact me via mail and my apps are made by me and I don't collect any data cus idc"
+                "Contact me via email and my apps are made by me and I don't collect any data cus idc"
               </p>
             </div>
           </CardContent>
