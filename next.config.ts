@@ -4,6 +4,7 @@ const nextConfig: NextConfig = {
   /* config options here */
   output: 'export',
   basePath: '/IDRK',
+  assetPrefix: '/IDRL',
   typescript: {
     ignoreBuildErrors: true,
   },
