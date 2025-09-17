@@ -1,9 +1,9 @@
 import Link from "next/link";
 import {
   CodeXml,
-  Palette,
+  Lightbulb,
   BrainCircuit,
-  Camera,
+  PenLine,
   Music,
   Settings,
   ArrowRight,
@@ -16,33 +16,27 @@ import { MateiAllLogo } from "@/components/icons";
 const skills = [
   {
     icon: CodeXml,
-    title: "Development",
-    description: "Building robust and scalable applications from scratch.",
+    title: "Code",
   },
   {
-    icon: Palette,
-    title: "Design",
-    description: "Crafting intuitive and beautiful user interfaces.",
+    icon: Lightbulb,
+    title: "Product",
   },
   {
     icon: BrainCircuit,
     title: "AI & ML",
-    description: "Integrating intelligence into applications for smarter solutions.",
   },
   {
-    icon: Camera,
-    title: "Visuals",
-    description: "Creating compelling visual content through photography and videography.",
+    icon: PenLine,
+    title: "Writing",
   },
   {
     icon: Music,
     title: "Audio",
-    description: "Producing and engineering sound for various media.",
   },
   {
     icon: Settings,
     title: "Engineering",
-    description: "Solving complex problems with a versatile engineering mindset.",
   },
 ];
 
