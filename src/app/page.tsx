@@ -66,8 +66,8 @@ export default function Home() {
             <div className="flex flex-col items-center space-y-6 text-center">
               <div className="space-y-4">
                 <PersonalizedGreeting />
-                <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl/none font-headline text-primary">
-                  I'm Radulescu. I do everything.
+                <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl/none font-headline bg-gradient-to-r from-primary via-accent to-primary text-transparent bg-clip-text bg-300% animate-gradient">
+                  I'm Matei and I do everything.
                 </h1>
                 <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
                   A multi-disciplinary creator, developer, and innovator. Welcome
