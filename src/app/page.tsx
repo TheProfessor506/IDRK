@@ -6,7 +6,6 @@ import {
   Camera,
   Music,
   Settings,
-  MoveRight,
   ArrowRight,
 } from "lucide-react";
 
@@ -84,16 +83,6 @@ export default function Home() {
                   creations.
                 </p>
               </div>
-              <Button
-                asChild
-                size="lg"
-                className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold"
-              >
-                <a href="#skills">
-                  Explore My Skills
-                  <MoveRight className="ml-2 h-5 w-5" />
-                </a>
-              </Button>
             </div>
           </div>
         </section>
@@ -102,12 +91,8 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">
-                A Spectrum of Skills
+                What can I do
               </h2>
-              <p className="max-w-[900px] text-secondary-foreground/80 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                From code to creation, my toolkit is diverse. Here's a glimpse
-                into what I do.
-              </p>
             </div>
             <div className="mx-auto grid items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3">
               {skills.map((skill) => (
@@ -121,7 +106,6 @@ export default function Home() {
                   <h3 className="text-xl font-bold font-headline">
                     {skill.title}
                   </h3>
-                  <p className="text-muted-foreground">{skill.description}</p>
                 </div>
               ))}
             </div>
