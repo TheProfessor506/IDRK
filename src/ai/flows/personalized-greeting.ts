@@ -32,9 +32,9 @@ const personalizedGreetingPrompt = ai.definePrompt({
   The greeting should not be more than 20 words.
   The greeting should be casual but professional.
   Examples of great greetings:
-  "Welcome to Matei's all!"
-  "Hi there! Welcome to Matei's personal website."
-  "Welcome! Feel free to explore Matei's portfolio."
+  "Welcome to Radulescu.org!"
+  "Hi there! Welcome to my personal website."
+  "Welcome! Feel free to explore this portfolio."
   Examples of bad greetings:
   "Good morning! How can I help you today?"
   "Welcome to my website! I hope you enjoy your stay."

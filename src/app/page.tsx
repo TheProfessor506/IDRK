@@ -11,16 +11,15 @@ import {
 
 import { Button } from "@/components/ui/button";
 import { PersonalizedGreeting } from "@/components/personalized-greeting";
-import { MateiAllLogo } from "@/components/icons";
 
 const skills = [
   {
     icon: CodeXml,
-    title: "Code",
+    title: "I Code",
   },
   {
     icon: Lightbulb,
-    title: "Product",
+    title: "I have ideas",
   },
   {
     icon: BrainCircuit,
@@ -49,8 +48,7 @@ export default function Home() {
           className="flex items-center justify-center gap-2"
           prefetch={false}
         >
-          <MateiAllLogo className="h-8 w-8" />
-          <span className="text-2xl font-bold font-headline">Matei.All</span>
+          <span className="text-2xl font-bold font-headline">Radulescu.org</span>
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
           <Button asChild variant="ghost">
@@ -69,7 +67,7 @@ export default function Home() {
               <div className="space-y-4">
                 <PersonalizedGreeting />
                 <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl/none font-headline text-primary">
-                  I'm Matei. I do everything.
+                  I'm Radulescu. I do everything.
                 </h1>
                 <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
                   A multi-disciplinary creator, developer, and innovator. Welcome
@@ -109,7 +107,7 @@ export default function Home() {
 
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
         <p className="text-xs text-muted-foreground">
-          &copy; {new Date().getFullYear()} Matei.All. All rights reserved.
+          &copy; {new Date().getFullYear()} Radulescu.org. All rights reserved.
         </p>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">
           <Link

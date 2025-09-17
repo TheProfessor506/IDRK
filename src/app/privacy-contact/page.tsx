@@ -3,15 +3,13 @@ import { ContactForm } from '@/components/contact-form';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
-import { MateiAllLogo } from '@/components/icons';
 
 export default function PrivacyContactPage() {
   return (
     <div className="min-h-screen w-full flex flex-col items-center justify-center bg-background p-4 sm:p-6 md:p-8">
       <header className="absolute top-0 left-0 w-full p-4 flex justify-between items-center sm:p-6">
         <Link href="/" className="flex items-center gap-2 group" prefetch={false}>
-          <MateiAllLogo className="h-8 w-8 transition-transform group-hover:scale-110" />
-          <span className="font-headline text-xl font-bold">Matei.All</span>
+          <span className="font-headline text-xl font-bold">Radulescu.org</span>
         </Link>
         <Button asChild variant="ghost">
           <Link href="/">
