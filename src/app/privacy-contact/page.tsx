@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { ContactForm } from '@/components/contact-form';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
@@ -30,9 +29,6 @@ export default function PrivacyContactPage() {
               <p className="text-secondary-foreground/80">
                 "Contact me via mail and my apps are made by me and I don't collect any data cus idc"
               </p>
-            </div>
-            <div className="w-full">
-              <ContactForm />
             </div>
           </CardContent>
         </Card>
