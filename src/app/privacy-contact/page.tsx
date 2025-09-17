@@ -22,14 +22,25 @@ export default function PrivacyContactPage() {
         <Card className="w-full">
           <CardHeader className="text-center">
             <CardTitle className="text-3xl font-headline">Privacy & Contact</CardTitle>
-            <CardDescription className="pt-2">My policy is simple. My contact form is even simpler. matei@radulescu.org</CardDescription>
+            <CardDescription className="pt-2">
+              My privacy policy is simple. For any questions, you can reach me at:{' '}
+              <a href="mailto:matei@radulescu.org" className="text-primary underline">
+                matei@radulescu.org
+              </a>
+            </CardDescription>
           </CardHeader>
-          <CardContent className="flex flex-col items-center gap-8 pt-2">
-            <div className="text-center p-6 bg-secondary rounded-lg w-full">
-              <p className="text-secondary-foreground/80">
-                "Contact me via email and my apps are made by me and I don't collect any data cus idc"
-              </p>
-            </div>
+          <CardContent className="prose prose-sm prose-invert max-w-none text-muted-foreground">
+            <h3>No Data Collection</h3>
+            <p>
+              I do not collect, use, save, or have access to any of your personal data from any of my applications or this website.
+            </p>
+            <p>
+              This website does not use cookies, tracking scripts, or any third-party analytics or advertising frameworks. Since I collect no data, your personal information is safe.
+            </p>
+            <h3>Commitment to Privacy</h3>
+            <p>
+              This website and any associated applications are created by a sole independent developer. My business model does not depend on collecting or monetizing user data. I value privacy and have designed my projects with this principle at the core.
+            </p>
           </CardContent>
         </Card>
       </main>
