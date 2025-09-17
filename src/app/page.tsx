@@ -12,8 +12,6 @@ import {
 
 import { Button } from "@/components/ui/button";
 import { PersonalizedGreeting } from "@/components/personalized-greeting";
-import { ImageGallery } from "@/components/image-gallery";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { MateiAllLogo } from "@/components/icons";
 
 const skills = [
@@ -50,10 +48,6 @@ const skills = [
 ];
 
 export default function Home() {
-  const galleryImages = PlaceHolderImages.filter((img) =>
-    img.id.startsWith("gallery-")
-  );
-
   return (
     <div className="flex flex-col min-h-[100dvh] bg-background text-foreground">
       <header className="px-4 lg:px-6 h-16 flex items-center shadow-sm sticky top-0 z-50 bg-background/80 backdrop-blur-sm">
@@ -131,20 +125,6 @@ export default function Home() {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
-
-        <section id="gallery" className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">
-                My Gallery
-              </h2>
-              <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                A visual journey through my projects and passions.
-              </p>
-            </div>
-            <ImageGallery images={galleryImages} />
           </div>
         </section>
       </main>
