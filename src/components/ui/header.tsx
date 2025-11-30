@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { Button } from "./button";
 import { Sheet, SheetContent, SheetTrigger } from "./sheet";
+import { PrivacyModal } from "../PrivacyModal";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -21,12 +22,11 @@ export function Header() {
         >
           Proiecte
         </Link>
-        <Link
-          href="/privacy-contact"
-          className="text-sm font-medium hover:underline underline-offset-4"
-        >
-          Privacy & Contact
-        </Link>
+        <PrivacyModal>
+          <span className="text-sm font-medium hover:underline underline-offset-4 cursor-pointer">
+            Privacy & Contact
+          </span>
+        </PrivacyModal>
       </nav>
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger asChild>
@@ -51,13 +51,14 @@ export function Header() {
             >
               Proiecte
             </Link>
-            <Link
-              href="/privacy-contact"
-              className="text-sm font-medium hover:underline underline-offset-4"
-              onClick={() => setOpen(false)}
-            >
-              Privacy & Contact
-            </Link>
+            <PrivacyModal>
+              <span
+                className="text-sm font-medium hover:underline underline-offset-4 cursor-pointer"
+                onClick={() => setOpen(false)}
+              >
+                Privacy & Contact
+              </span>
+            </PrivacyModal>
           </div>
         </SheetContent>
       </Sheet>

@@ -1,4 +1,11 @@
-import type {NextConfig} from 'next';
+import type { NextConfig } from 'next';
+
+
+// Patch for Node 25+ where localStorage is defined but broken
+if (typeof global.localStorage !== 'undefined') {
+  // @ts-ignore
+  delete global.localStorage;
+}
 
 const nextConfig: NextConfig = {
   /* config options here */
