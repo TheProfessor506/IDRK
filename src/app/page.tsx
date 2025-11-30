@@ -41,7 +41,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-[100dvh] bg-background text-foreground">
       <main className="relative">
-        <section className="h-screen md:sticky top-0 z-10 flex flex-col items-center justify-center text-center bg-background">
+        <section className="h-screen sticky top-0 z-10 flex flex-col items-center justify-center text-center bg-background">
           <div className="container px-4 md:px-6">
             <div className="space-y-4">
               <p className="text-xl md:text-2xl text-muted-foreground">Welcome to my personal website.</p>
@@ -53,14 +53,14 @@ export default function Home() {
         </section>
 
         <div className="relative z-20">
-          <section id="skills" className="md:sticky top-0 min-h-screen py-12 md:py-24 lg:py-32 flex flex-col items-center justify-center bg-secondary">
+          <section id="skills" className="sticky top-0 min-h-screen py-12 md:py-24 lg:py-32 flex flex-col items-center justify-center bg-secondary">
             <div className="container px-4 md:px-6">
                 <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">
                     What can I do
                 </h2>
                 </div>
-                <div className="mx-auto grid items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3">
+                <div className="mx-auto grid items-start gap-8 grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3">
                 {skills.map((skill) => (
                     <div
                     key={skill.title}
