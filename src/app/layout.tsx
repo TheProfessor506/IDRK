@@ -5,8 +5,8 @@ import { Header } from "../components/ui/header";
 import SmoothScrolling from "../components/SmoothScrolling";
 
 export const metadata: Metadata = {
-  title: "Radulescu.org",
-  description: "The personal website of a multi-disciplinary creator.",
+  title: "Matei's Website",
+  description: "Ballin but at what cost?",
 };
 
 export default function RootLayout({

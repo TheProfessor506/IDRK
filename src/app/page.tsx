@@ -23,7 +23,7 @@ const skills = [
   },
   {
     icon: BrainCircuit,
-    title: "AI & ML",
+    title: "Gaming with AI & ML",
   },
   {
     icon: PenLine,
@@ -31,7 +31,7 @@ const skills = [
   },
   {
     icon: Music,
-    title: "Audio",
+    title: "Messing with Audio",
   },
   {
     icon: Settings,
