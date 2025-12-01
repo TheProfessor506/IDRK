@@ -10,10 +10,10 @@ export default function Proiecte() {
           <div className="flex flex-col items-center space-y-6 text-center mb-12">
             <div className="space-y-4">
               <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl/none font-headline bg-gradient-to-r from-primary via-accent to-primary text-transparent bg-clip-text bg-300% animate-gradient">
-                University Projects
+                Projects
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground">
-                A collection of my academic work.
+                Stuff I've made
               </p>
             </div>
           </div>

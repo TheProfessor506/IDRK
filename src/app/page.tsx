@@ -47,7 +47,7 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <div className="space-y-4">
               <p className="text-xl md:text-2xl text-muted-foreground">Welcome</p>
-              <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl/none font-headline bg-gradient-to-r from-primary via-accent to-primary text-transparent bg-clip-text bg-300% animate-gradient">
+              <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl/tight font-headline bg-gradient-to-r from-primary via-accent to-primary text-transparent bg-clip-text bg-300% animate-gradient pb-2">
                 Doing everything I can
               </h1>
             </div>
@@ -96,7 +96,7 @@ export default function Home() {
                       <BookOpen className="h-8 w-8" />
                     </div>
                     <h3 className="text-xl font-bold font-headline">
-                      University Project
+                      Projects
                     </h3>
                   </div>
                 </Link>
