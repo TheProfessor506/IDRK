@@ -7,6 +7,9 @@ import SmoothScrolling from "../components/SmoothScrolling";
 export const metadata: Metadata = {
   title: "Matei's Website",
   description: "Ballin but at what cost?",
+  icons: {
+    icon: "/icon.png",
+  },
 };
 
 export default function RootLayout({

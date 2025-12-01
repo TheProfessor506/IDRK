@@ -13,6 +13,7 @@ export function Header() {
   return (
     <header className="flex h-16 items-center justify-between px-4 md:px-6">
       <Link href="/" className="flex items-center gap-2">
+        <img src="/icon.png" alt="Logo" className="h-8 w-8 object-contain" />
         <span className="font-semibold">Home</span>
       </Link>
       <nav className="hidden md:flex items-center gap-6">
