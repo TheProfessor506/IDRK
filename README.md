@@ -1,6 +1,4 @@
-# Firebase Studio
+# Banan?
+Was bored tried to learn typescript and nextjs
+# Ballin but at what cost?
 
-This is a NextJS starter in Firebase Studio.
-
-To get started, take a look at src/app/page.tsx.
-# IDRK
