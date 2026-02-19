@@ -103,113 +103,159 @@ export default function CalculatorProject() {
         });
 
         if (typeof window !== "undefined" && (window as any).tsParticles) {
-            (window as any).tsParticles.load({
-                id: "tsparticles",
-                options: {
-                    "fullScreen": {
-                        "zIndex": 1
+            (window as any).tsParticles.load("tsparticles", {
+                "fullScreen": {
+                    "zIndex": 1
+                },
+                "emitters": {
+                    "direction": "top",
+                    "life": {
+                        "count": 1,
+                        "duration": 5,
+                        "delay": 0.1
                     },
-                    "particles": {
-                        "color": {
-                            "value": [
-                                "#FFFFFF",
-                                "#FFd700"
-                            ]
+                    "rate": {
+                        "delay": 0.1,
+                        "quantity": 15
+                    },
+                    "size": {
+                        "width": 100,
+                        "height": 0
+                    },
+                    "position": {
+                        "y": 100,
+                        "x": 50
+                    }
+                },
+                "particles": {
+                    "color": {
+                        "value": [
+                            "#FFFFFF",
+                            "#FFd700",
+                            "#FF0000",
+                            "#00FF00",
+                            "#0000FF"
+                        ]
+                    },
+                    "move": {
+                        "direction": "top",
+                        "enable": true,
+                        "outModes": {
+                            "default": "out",
+                            "top": "none"
                         },
-                        "move": {
-                            "direction": "bottom",
+                        "size": true,
+                        "speed": {
+                            "min": 25,
+                            "max": 60
+                        },
+                        "gravity": {
                             "enable": true,
-                            "outModes": {
-                                "default": "out"
-                            },
-                            "size": true,
-                            "speed": {
-                                "min": 1,
-                                "max": 3
-                            }
+                            "acceleration": 9.81
+                        }
+                    },
+                    "number": {
+                        "value": 0
+                    },
+                    "opacity": {
+                        "value": 1,
+                        "animation": {
+                            "enable": false,
+                            "startValue": "max",
+                            "destroy": "min",
+                            "speed": 0.3,
+                            "sync": true
+                        }
+                    },
+                    "rotate": {
+                        "value": {
+                            "min": 0,
+                            "max": 360
                         },
-                        "number": {
-                            "value": 500,
-                            "density": {
-                                "enable": true,
-                                "area": 800
-                            }
-                        },
-                        "opacity": {
-                            "value": 1,
-                            "animation": {
-                                "enable": false,
-                                "startValue": "max",
-                                "destroy": "min",
-                                "speed": 0.3,
-                                "sync": true
-                            }
-                        },
-                        "rotate": {
-                            "value": {
-                                "min": 0,
-                                "max": 360
-                            },
-                            "direction": "random",
-                            "move": true,
-                            "animation": {
-                                "enable": true,
-                                "speed": 60
-                            }
-                        },
-                        "tilt": {
-                            "direction": "random",
+                        "direction": "random",
+                        "move": true,
+                        "animation": {
                             "enable": true,
-                            "move": true,
-                            "value": {
-                                "min": 0,
-                                "max": 360
-                            },
-                            "animation": {
-                                "enable": true,
-                                "speed": 60
-                            }
+                            "speed": 60
+                        }
+                    },
+                    "tilt": {
+                        "direction": "random",
+                        "enable": true,
+                        "move": true,
+                        "value": {
+                            "min": 0,
+                            "max": 360
                         },
-                        "shape": {
-                            "type": [
-                                "circle",
-                                "square",
-                                "triangle"
-                            ],
-                            "options": {}
-                        },
-                        "size": {
-                            "value": {
-                                "min": 2,
-                                "max": 4
-                            }
-                        },
-                        "roll": {
-                            "darken": {
-                                "enable": true,
-                                "value": 30
-                            },
-                            "enlighten": {
-                                "enable": true,
-                                "value": 30
-                            },
+                        "animation": {
                             "enable": true,
-                            "speed": {
-                                "min": 15,
-                                "max": 25
-                            }
-                        },
-                        "wobble": {
-                            "distance": 30,
+                            "speed": 60
+                        }
+                    },
+                    "shape": {
+                        "type": [
+                            "circle",
+                            "square",
+                            "triangle"
+                        ],
+                        "options": {}
+                    },
+                    "size": {
+                        "value": {
+                            "min": 2,
+                            "max": 4
+                        }
+                    },
+                    "roll": {
+                        "darken": {
                             "enable": true,
-                            "move": true,
-                            "speed": {
-                                "min": -15,
-                                "max": 15
-                            }
+                            "value": 30
+                        },
+                        "enlighten": {
+                            "enable": true,
+                            "value": 30
+                        },
+                        "enable": true,
+                        "speed": {
+                            "min": 15,
+                            "max": 25
+                        }
+                    },
+                    "wobble": {
+                        "distance": 30,
+                        "enable": true,
+                        "move": true,
+                        "speed": {
+                            "min": -15,
+                            "max": 15
                         }
                     }
                 }
+            }).then((container: any) => {
+                const el = document.getElementById("tsparticles");
+                if (el) {
+                    el.style.opacity = "1";
+                    el.style.transition = "none";
+                }
+
+                // Stop emitting and fade out exactly after 5 seconds to clean up
+                setTimeout(() => {
+                    if (el) {
+                        el.style.transition = "opacity 3s ease";
+                        el.style.opacity = "0";
+                    }
+
+                    // After fade out completes, destroy container
+                    setTimeout(() => {
+                        if (container) {
+                            container.destroy();
+                        }
+                        if (el) {
+                            el.style.transition = "none";
+                            el.style.opacity = "1";
+                        }
+                    }, 3000);
+                }, 5000);
             });
         }
     };
