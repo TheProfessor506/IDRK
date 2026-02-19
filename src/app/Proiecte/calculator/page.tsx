@@ -112,7 +112,7 @@ export default function CalculatorProject() {
                                 Road Curve Calculator
                             </h1>
                             <p className="text-xl md:text-2xl text-muted-foreground max-w-[800px] mx-auto">
-                                Geometry calculations for road design
+                                Agongus
                             </p>
                         </div>
                     </div>
