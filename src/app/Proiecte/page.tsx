@@ -1,6 +1,6 @@
 
 import Link from "next/link";
-import { BookOpen } from "lucide-react";
+import { BookOpen, Calculator } from "lucide-react";
 
 export default function Proiecte() {
   return (
@@ -26,6 +26,17 @@ export default function Proiecte() {
                 </div>
                 <h3 className="text-xl font-bold font-headline">
                   Fundamentele managementului organizației
+                </h3>
+              </div>
+            </Link>
+
+            <Link href="/Proiecte/calculator">
+              <div className="flex flex-col items-center text-center gap-2 p-6 rounded-lg bg-card shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-2 h-full">
+                <div className="bg-accent/20 text-accent p-4 rounded-full mb-4">
+                  <Calculator className="h-8 w-8" />
+                </div>
+                <h3 className="text-xl font-bold font-headline">
+                  Formula Calculator
                 </h3>
               </div>
             </Link>
