@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Calculator as CalculatorIcon, ArrowRight, Settings2 } from "lucide-react";
 import FadeIn from "@/components/FadeIn";
+import Script from "next/script";
 
 type UnitType = "gradians" | "degrees";
 
@@ -100,11 +101,124 @@ export default function CalculatorProject() {
             C,
             unit
         });
+
+        if (typeof window !== "undefined" && (window as any).tsParticles) {
+            (window as any).tsParticles.load({
+                id: "tsparticles",
+                options: {
+                    "fullScreen": {
+                        "zIndex": 1
+                    },
+                    "particles": {
+                        "color": {
+                            "value": [
+                                "#FFFFFF",
+                                "#FFd700"
+                            ]
+                        },
+                        "move": {
+                            "direction": "bottom",
+                            "enable": true,
+                            "outModes": {
+                                "default": "out"
+                            },
+                            "size": true,
+                            "speed": {
+                                "min": 1,
+                                "max": 3
+                            }
+                        },
+                        "number": {
+                            "value": 500,
+                            "density": {
+                                "enable": true,
+                                "area": 800
+                            }
+                        },
+                        "opacity": {
+                            "value": 1,
+                            "animation": {
+                                "enable": false,
+                                "startValue": "max",
+                                "destroy": "min",
+                                "speed": 0.3,
+                                "sync": true
+                            }
+                        },
+                        "rotate": {
+                            "value": {
+                                "min": 0,
+                                "max": 360
+                            },
+                            "direction": "random",
+                            "move": true,
+                            "animation": {
+                                "enable": true,
+                                "speed": 60
+                            }
+                        },
+                        "tilt": {
+                            "direction": "random",
+                            "enable": true,
+                            "move": true,
+                            "value": {
+                                "min": 0,
+                                "max": 360
+                            },
+                            "animation": {
+                                "enable": true,
+                                "speed": 60
+                            }
+                        },
+                        "shape": {
+                            "type": [
+                                "circle",
+                                "square",
+                                "triangle"
+                            ],
+                            "options": {}
+                        },
+                        "size": {
+                            "value": {
+                                "min": 2,
+                                "max": 4
+                            }
+                        },
+                        "roll": {
+                            "darken": {
+                                "enable": true,
+                                "value": 30
+                            },
+                            "enlighten": {
+                                "enable": true,
+                                "value": 30
+                            },
+                            "enable": true,
+                            "speed": {
+                                "min": 15,
+                                "max": 25
+                            }
+                        },
+                        "wobble": {
+                            "distance": 30,
+                            "enable": true,
+                            "move": true,
+                            "speed": {
+                                "min": -15,
+                                "max": 15
+                            }
+                        }
+                    }
+                }
+            });
+        }
     };
 
     return (
         <main className="flex-1">
-            <section className="w-full py-20 md:py-32 lg:py-40 xl:py-48 animate-in fade-in zoom-in duration-700 slide-in-from-bottom-4">
+            <Script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js" strategy="lazyOnload" />
+            <div id="tsparticles" className="pointer-events-none fixed inset-0 z-[1]" />
+            <section className="w-full py-20 md:py-32 lg:py-40 xl:py-48 animate-in fade-in zoom-in duration-700 slide-in-from-bottom-4 relative z-10">
                 <div className="container px-4 md:px-6">
                     <div className="flex flex-col items-center space-y-6 text-center mb-12">
                         <div className="space-y-4">
