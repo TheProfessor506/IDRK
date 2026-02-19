@@ -21,7 +21,7 @@ interface CalculationResults {
 export default function CalculatorProject() {
     const [nValue, setNValue] = useState<string>("");
     const [uValue, setUValue] = useState<string>("");
-    const [alphaMsg, setAlphaMsg] = useState<string>(""); // Helper for alpha_c input
+    const [alphaMsg, setAlphaMsg] = useState<string>("");
     const [alphaCValue, setAlphaCValue] = useState<string>("");
     const [unit, setUnit] = useState<UnitType>("gradians");
     const [results, setResults] = useState<CalculationResults | null>(null);
