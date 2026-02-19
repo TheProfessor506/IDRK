@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Calculator as CalculatorIcon, ArrowRight, Settings2 } from "lucide-react";
 import FadeIn from "@/components/FadeIn";
 import Script from "next/script";
+import angryEmoji from "./src_img/angry-emoji.gif";
 
 type UnitType = "gradians" | "degrees";
 
@@ -26,6 +27,18 @@ export default function CalculatorProject() {
     const [unit, setUnit] = useState<UnitType>("gradians");
     const [results, setResults] = useState<CalculationResults | null>(null);
     const [error, setError] = useState<string | null>(null);
+    const [showErrorImage, setShowErrorImage] = useState<boolean>(false);
+
+    const triggerError = (errorMessage: string) => {
+        setError(errorMessage);
+        setShowErrorImage(true);
+        setTimeout(() => setShowErrorImage(false), 2000);
+
+        try {
+            const audio = new Audio("/sounds/grrrr-clash-royale.mp3");
+            audio.play().catch((e) => console.log("Audio playback prevented by browser", e));
+        } catch (err) { }
+    };
 
     const calculate = () => {
         setError(null);
@@ -36,20 +49,20 @@ export default function CalculatorProject() {
         const alpha_c = parseFloat(alphaCValue.replace(',', '.'));
 
         if (isNaN(N) || isNaN(U) || isNaN(alpha_c)) {
-            setError("Please enter valid numeric values for all fields.");
+            triggerError("Please enter valid numeric values for all fields.");
             return;
         }
 
         // Validation Logic
         if (unit === "gradians") {
             if (Math.abs(U + alpha_c - 200) > 0.01) {
-                setError("Nu da bine mai incearca!");
+                triggerError("Nu da bine mai incearca!");
                 return;
             }
         } else {
             // Degrees
             if (Math.abs(U + alpha_c - 180) > 0.01) {
-                setError("Nu da bine mai incearca!");
+                triggerError("Nu da bine mai incearca!");
                 return;
             }
         }
@@ -101,6 +114,11 @@ export default function CalculatorProject() {
             C,
             unit
         });
+
+        try {
+            const successAudio = new Audio("/sounds/yippeeeeeeeeeeeeee.mp3");
+            successAudio.play().catch((e) => console.log("Success audio playback prevented", e));
+        } catch (err) { }
 
         if (typeof window !== "undefined" && (window as any).tsParticles) {
             (window as any).tsParticles.load("tsparticles", {
@@ -361,8 +379,19 @@ export default function CalculatorProject() {
                                     </div>
 
                                     {error && (
-                                        <div className="p-3 text-sm text-destructive bg-destructive/10 rounded-md border border-destructive/20 animate-in fade-in slide-in-from-top-2">
-                                            {error}
+                                        <div className="space-y-4">
+                                            <div className="p-3 text-sm text-destructive bg-destructive/10 rounded-md border border-destructive/20 animate-in fade-in slide-in-from-top-2">
+                                                {error}
+                                            </div>
+                                            {showErrorImage && (
+                                                <div className="flex justify-center animate-in fade-in zoom-in duration-300">
+                                                    <img
+                                                        src={angryEmoji.src}
+                                                        alt="Error indicator"
+                                                        className="h-32 w-auto object-contain drop-shadow-lg"
+                                                    />
+                                                </div>
+                                            )}
                                         </div>
                                     )}
 
