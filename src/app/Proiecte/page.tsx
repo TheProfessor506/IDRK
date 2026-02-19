@@ -18,26 +18,30 @@ export default function Proiecte() {
             </div>
           </div>
 
-          <div className="mx-auto grid items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3">
-            <Link href="/Proiecte/fundamentele-managementului-organizatiei">
-              <div className="flex flex-col items-center text-center gap-2 p-6 rounded-lg bg-card shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-2 h-full">
-                <div className="bg-accent/20 text-accent p-4 rounded-full mb-4">
-                  <BookOpen className="h-8 w-8" />
+          <div className="mx-auto grid gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-2">
+            <Link href="/Proiecte/fundamentele-managementului-organizatiei" className="h-full w-full">
+              <div className="flex flex-col items-center text-center gap-2 p-6 rounded-lg bg-card shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-2 h-full justify-between">
+                <div className="flex flex-col items-center gap-4 w-full">
+                  <div className="bg-accent/20 text-accent p-4 rounded-full">
+                    <BookOpen className="h-8 w-8" />
+                  </div>
+                  <h3 className="text-xl font-bold font-headline break-words w-full">
+                    Fundamentele managementului organizației
+                  </h3>
                 </div>
-                <h3 className="text-xl font-bold font-headline">
-                  Fundamentele managementului organizației
-                </h3>
               </div>
             </Link>
 
-            <Link href="/Proiecte/calculator">
-              <div className="flex flex-col items-center text-center gap-2 p-6 rounded-lg bg-card shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-2 h-full">
-                <div className="bg-accent/20 text-accent p-4 rounded-full mb-4">
-                  <Calculator className="h-8 w-8" />
+            <Link href="/Proiecte/calculator" className="h-full w-full">
+              <div className="flex flex-col items-center text-center gap-2 p-6 rounded-lg bg-card shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-2 h-full justify-between">
+                <div className="flex flex-col items-center gap-4 w-full">
+                  <div className="bg-accent/20 text-accent p-4 rounded-full">
+                    <Calculator className="h-8 w-8" />
+                  </div>
+                  <h3 className="text-xl font-bold font-headline">
+                    Calculator Cai de comunicare partea 1 a proiectului
+                  </h3>
                 </div>
-                <h3 className="text-xl font-bold font-headline">
-                  Formula Calculator
-                </h3>
               </div>
             </Link>
           </div>
