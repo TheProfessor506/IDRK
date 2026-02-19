@@ -4,9 +4,8 @@ import {
   CodeXml,
   Lightbulb,
   BrainCircuit,
-  PenLine,
   Music,
-  Settings,
+  Car,
   BookOpen,
   Shield,
 } from "lucide-react";
@@ -26,16 +25,12 @@ const skills = [
     title: "Gaming with AI & ML",
   },
   {
-    icon: PenLine,
-    title: "Writing",
-  },
-  {
     icon: Music,
     title: "Messing with Audio",
   },
   {
-    icon: Settings,
-    title: "Engineering",
+    icon: Car,
+    title: "Car stuff",
   },
 ];
 
