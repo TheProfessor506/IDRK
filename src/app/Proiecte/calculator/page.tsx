@@ -77,7 +77,7 @@ export default function CalculatorProject() {
         const k = 35 - 0.5 * N;
 
         // 3. Calculate Minimum Radius: R_min_raw = (Vp^2) / (127 * (ps + k))
-        const R_min_raw = (Vp * Vp) / (127 * (ps + (k / 100)));
+        const R_min_raw = (Vp * Vp) / (127 * (ps + k));
 
         // 4. Calculate Standard Radius: R = Round R_min_raw up to the nearest multiple of 5
         const R = Math.ceil(R_min_raw / 5) * 5;
